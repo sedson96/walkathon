@@ -1,25 +1,32 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import "./reset.css"
 import './App.css';
+import Stats from "./components/Stats"
+import Sponsors from "./components/Sponsors"
+import NewSponsor from "./components/NewSponsor"
+import Header from "./components/Header"
 
 class App extends Component {
+  constructor() {
+    super()
+    this.state = {
+      nav: "home"
+    }
+    this.navigate = this.navigate.bind(this);
+  }
+  navigate(nav) {
+    this.setState({nav})
+  }
+
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+      <div>
+        <Header navigate={this.navigate} />
+        {this.state.nav === "home" ? <Stats /> :
+         this.state.nav === "sponsors" ? <Sponsors /> :
+         this.state.nav === "new" ? <NewSponsor navigate={this.navigate}/> :
+         "An error has occured"}
+        
       </div>
     );
   }

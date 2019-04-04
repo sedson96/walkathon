@@ -1,0 +1,56 @@
+h1 {
+    font-size: 9em;
+    margin:10vh auto;
+}
+.stats{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    color: #ccc;
+}
+.goals {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.goals h2{
+    font-size: 5em;
+
+}
+.goals div {
+    height: 30vh;
+    display: flex;
+    align-items: center;
+    width: 100vw;
+    justify-content: space-around
+
+}
+.promised {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.promised h2{
+    font-size: 5em;
+
+}
+.promised div {
+    height: 30vh;
+    display: flex;
+    align-items: center;
+    width: 100vw;
+    justify-content: space-around
+
+}
+.collected{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    display: flex;
+    width: 100vw;
+    justify-content: space-around;
+    font-size: 5em;
+}
+.collected h2{
+    padding:.5em
+}
