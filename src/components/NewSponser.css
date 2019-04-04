@@ -3,16 +3,39 @@ form {
     align-content: center;
     flex-direction: column;
     font-size: 2em;
+    width: 60vw;
+    margin: auto;
+    background: white;
+    padding:20px;
+    border-radius: 5px;
 }
 form div {
     display: flex;
     justify-content: space-between;
     margin:20px
 }
-input {
-    width: 30em;
+.boxs {
+    width: 20em;
     height: 45px;
     border-radius: 3px;
     border: 1px solid #424249;
   
 }
+.check  {
+    display: block;
+    margin: 0.2em;
+    cursor: pointer;
+    padding: 0.2em;
+}
+
+button {
+    height: 6vh;
+    border-radius: 5px;
+    background: #A89344;
+    color: #122A45;
+    font-size: 1em;
+    margin:20px;
+    text-align: center;
+    margin: 20px auto;
+}
+  

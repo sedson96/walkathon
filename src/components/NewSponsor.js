@@ -33,37 +33,39 @@ class NewSponser extends Component {
         }
 
 
+
     render() {
         return(
             <main>
                 <form>
                     <div>
                         <label>First Name:</label>
-                        <input name="firstName" onChange={this.handleChange}/>
+                        <input className="boxs" name="firstName" onChange={this.handleChange}/>
                     </div>
                     <div>
                         <label>Last Name:</label>
-                        <input name="lastName" onChange={this.handleChange}/>
+                        <input className="boxs" name="lastName" onChange={this.handleChange}/>
                     </div>
                     <div>
                         <label>Phone Number:</label>
-                        <input name="phone" onChange={this.handleChange}/>
+                        <input className="boxs" name="phone" onChange={this.handleChange}/>
                     </div>
                     <div>
                         <label>Amount:</label>
-                        <input name="amount" onChange={this.handleChange}/>
                         <label>Per Lap Amount</label>
-                        <input type="checkbox" name="perLap" onChange={this.handleCheck}/>
+                        <input className="check" type="checkbox" name="perLap" onChange={this.handleCheck}/>
+                        <input className="boxs" name="amount" onChange={this.handleChange}/>
                     </div>
                     <div>
                         <label>Comments:</label>
-                        <input name="comment" onChange={this.handleChange}/>
+                        <input className="boxs" name="comment" onChange={this.handleChange}/>
                     </div> 
                     <div>
                         <label>Paid:</label>
-                        <input type="checkbox" name="paid" onChange={this.handleCheck}/>
+                        <input className="check" type="checkbox" name="paid" onChange={this.handleCheck}/>
                     </div> 
                     <button type="submit" onClick={this.handleSubmit}>Add Sponser</button>
+                    <button type="reset" onClick={() => this.props.navigate("sponsors")}>Cancel</button>
                 </form>
              </main>
         )

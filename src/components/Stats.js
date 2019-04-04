@@ -8,8 +8,8 @@ class Stats extends Component {
     constructor() {
         super() 
         this.state = {
-            goal: 10000,
-            lapGoal:40,
+            lapGoal: 0,
+            amountGoal: 0,
             sponsors: []
         }
     }
@@ -19,6 +19,9 @@ class Stats extends Component {
         .get("/api/sponsors")
         .then(response => this.setState({sponsors: response.data}))
         .catch(error => "There was an Error")
+        axios
+        .get("api/goals")
+        .then(response => this.setState(response.data))
     }
 
 
@@ -51,7 +54,7 @@ class Stats extends Component {
                  <section className="goals">
                     <h2>Goals</h2>
                     <div>
-                        <h2>{`$${this.state.goal}`}</h2>
+                        <h2>{`$${this.state.amountGoal}`}</h2>
                         <h2>{`$${this.state.lapGoal}/lap`}</h2>
                     </div>
                  </section>

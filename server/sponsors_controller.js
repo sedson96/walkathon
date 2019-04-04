@@ -40,6 +40,8 @@ let sponsors = [
 let getSponsors = (request,response) => {
     response.json(sponsors)
 }
+
+
 let addSponsor = (request,response) => {
     let newSponsor = request.body;
     newSponsor.id = id
@@ -49,8 +51,32 @@ let addSponsor = (request,response) => {
 }
 
 
+let updateSponsor =(request,response) => {
+    sponsors.map((sponsor,index) => {
+        if (+request.params.id === sponsor.id) {
+            sponsor[index] = request.body
+        }
+        response.json(sponsor)
+    })
+}
+
+
+let deleteSponsor = (request,response) => {
+    sponsors.map((sponsor,index) => {
+        if (+request.params.id === sponsor.id) {
+            sponsors.splice(index,1)
+        }
+
+    })
+    response.json(sponsors)
+}
+
+
+
 
 module.exports = {
     getSponsors,
-    addSponsor
+    addSponsor,
+    updateSponsor,
+    deleteSponsor
 }

@@ -9,6 +9,7 @@ class Sponsors extends Component {
         this.state = {
             sponsors: []
         }
+        this.delete = this.delete.bind(this)
     }
 
     componentDidMount() {
@@ -17,12 +18,18 @@ class Sponsors extends Component {
         .then(response => this.setState({sponsors: response.data}))
         .catch(error => "There was an Error")
 }
+    delete(id) {
+        axios
+        .delete(`/api/sponsors/${id}`)
+        .then(response => this.setState({sponsors: response.data}))
+        .catch(error => "There was an Error")
+    }
 
 render() {
     return(
         <main>
             {this.state.sponsors.map((sponsor) => { 
-             let {id,firstName,lastName,phone,amount,perLap,comment} = sponsor;
+             let {id,firstName,lastName,phone,amount,perLap,comment,paid} = sponsor;
              return(
              <Sponsor key={id} 
               firstName={firstName}
@@ -30,7 +37,11 @@ render() {
               phone={phone} 
               amount={amount}
               perLap={perLap}
-              comment={comment}/>
+              comment={comment}
+              delete={this.delete}
+              paid={paid}
+              id={id}
+              />
              )
             })}
         </main>
