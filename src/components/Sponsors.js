@@ -7,13 +7,11 @@ class Sponsors extends Component {
     constructor() {
         super()
         this.state = {
-            sponsors: [],
-            edit: false
+            sponsors: []
         }
         this.delete = this.delete.bind(this)
         this.changeAmount = this.changeAmount.bind(this)
         this.paidEdit = this.paidEdit.bind(this)
-        this.editToggle = this.editToggle.bind(this)
     }
 
     componentDidMount() {
@@ -29,13 +27,6 @@ class Sponsors extends Component {
         .then(response => this.setState({sponsors: response.data}))
         .catch(error => "There was an error")
         this.setState({edit: false})
-    }
-    editToggle() {
-        if(this.state.edit) {
-            this.setState({edit:false});
-        } else if (!this.state.edit) {
-            this.setState({edit: true});
-        }
     }
     paidEdit(paid,id) {
         if(paid) {
@@ -58,6 +49,7 @@ class Sponsors extends Component {
 render() {
     return(
         <main>
+            <h1 className ="title">Sponsors</h1>
             {this.state.sponsors.map((sponsor) => { 
              let {id,firstName,lastName,phone,amount,perLap,comment,paid} = sponsor;
              return(

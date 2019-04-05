@@ -37,6 +37,7 @@ class NewSponser extends Component {
     render() {
         return(
             <main>
+                <h1 className ="title">Add Sponser</h1>
                 <form>
                     <div>
                         <label>First Name:</label>

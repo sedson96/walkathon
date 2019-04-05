@@ -49,7 +49,7 @@ class Stats extends Component {
             //make another component 
              <main className="stats">
                  <section>
-                    <h1>Walk-A-Thon</h1>
+                    <h1 className ="title">Walk-A-Thon</h1>
                  </section>
                  <section className="goals">
                     <h2>Goals</h2>

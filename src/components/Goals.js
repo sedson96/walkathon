@@ -40,10 +40,11 @@ class Goals extends Component {
         let{lapGoal,amountGoal} = this.state;
         return(
             <main>
+                <h1 className ="title">Set Your Goals</h1>
                 <form className ="goalsForm">
                     <div>
-                        <label>Lap Goal</label>
-                        <label>Amount Goal</label>
+                        <label>Lap Amount</label>
+                        <label>Total Amount</label>
                     </div>
                     <div>
                         <input name="lapGoal" value={lapGoal} onChange={this.handleChange}/>

@@ -1,0 +1,22 @@
+.edit {
+    width: 70%;
+    height: 65%;
+    background: #122A45;
+    display: flex;
+    justify-content: flex-end
+
+
+}
+.edit input {
+    /* width: 5em;
+    height: ;
+    border-radius: 3px;
+    border: 1px solid #424249; */
+}
+.edit button {
+    font-size: .5em;
+}
+.edit p {
+    font-size: .5em;
+    color: #ccc
+}

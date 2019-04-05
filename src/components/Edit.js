@@ -1,5 +1,5 @@
 import React, {Component} from "react"
-
+import "./Edit.css"
 class Edit extends Component {
     constructor() {
         super() 
@@ -20,11 +20,13 @@ class Edit extends Component {
 
     render() {
         return (
-            <form>
+            <form className = "edit">
+                <button onClick={(event) => {event.preventDefault(); this.props.changeAmount(this.state.editAmount,this.state.perLap,this.props.id)}}>New Amount</button>
+                <div>
+                    <p>per lap</p>
+                    <input name="perLap" type="checkbox" onChange={this.handleCheck}/>
+                </div>
                 <input name="editAmount" onChange={this.handleChange}/>
-                <input name="perLap" type="checkbox" onChange={this.handleCheck}/>
-                <p>per lap</p>
-                <button onClick={(event) => {event.preventDefault(); this.props.changeAmount(this.state.editAmount,this.state.perLap,this.props.id)}}></button>
             </form>
         )
     }

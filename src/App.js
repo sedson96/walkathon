@@ -28,7 +28,6 @@ class App extends Component {
          this.state.nav === "new" ? <NewSponsor navigate={this.navigate}/> :
          this.state.nav === "goals" ? <Goals /> :
          "An error has occured"}
-        
       </div>
     );
   }
