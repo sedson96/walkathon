@@ -7,9 +7,13 @@ class Sponsors extends Component {
     constructor() {
         super()
         this.state = {
-            sponsors: []
+            sponsors: [],
+            edit: true
         }
         this.delete = this.delete.bind(this)
+        this.changeAmount = this.changeAmount.bind(this)
+        this.paidEdit = this.paidEdit.bind(this)
+        this.editToggle = this.editToggle.bind(this)
     }
 
     componentDidMount() {
@@ -18,6 +22,32 @@ class Sponsors extends Component {
         .then(response => this.setState({sponsors: response.data}))
         .catch(error => "There was an Error")
 }
+
+    changeAmount(newAmount,perLap, id) {
+        axios
+        .put(`/api/sponsors/amount/${id}`,{amount: newAmount, perLap: perLap})
+        .then(response => this.setState({sponsors: response.data}))
+        .catch(error => "There was an error")
+        this.setState({edit: false})
+    }
+    editToggle() {
+        if(this.state.edit) {
+            this.setState({edit:false});
+        } else if (!this.state.edit) {
+            this.setState({edit: true});
+        }
+    }
+    paidEdit(paid,id) {
+        if(paid) {
+            paid = false;
+        } else if (!paid) {
+            paid = true;
+        }
+        axios
+        .put(`/api/sponsors/${id}`,{paid})
+        .then(response => this.setState({sponsors: response.data}))
+        .catch(error => "There was an error")
+    }
     delete(id) {
         axios
         .delete(`/api/sponsors/${id}`)
@@ -39,8 +69,12 @@ render() {
               perLap={perLap}
               comment={comment}
               delete={this.delete}
+              changeAmount={this.changeAmount}
+              editToggle={this.editToggle}
+              paidEdit={this.paidEdit}
               paid={paid}
               id={id}
+              edit={this.state.edit}
               />
              )
             })}

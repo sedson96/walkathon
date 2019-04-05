@@ -5,6 +5,8 @@ header {
 }
 body {
     background: #A8ACB2;
+    font-family: 'Noto Sans', sans-serif;
+
 }
 img {
     max-height: 150px;
@@ -80,4 +82,19 @@ article {
 }
 .amount div {
     display: flex
+}
+.goalsForm {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.goalsForm input{
+    width: 10vw;
+    height: 45px;
+    border-radius: 3px;
+    border: 1px solid #424249;
+    font-size: 1em
+}
+svg {
+    cursor: pointer;
 }

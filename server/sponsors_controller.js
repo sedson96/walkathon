@@ -51,12 +51,22 @@ let addSponsor = (request,response) => {
 }
 
 
-let updateSponsor =(request,response) => {
+let updatePaid =(request,response) => {
+    sponsors.forEach((sponsor,index) => {
+        if (+request.params.id === sponsor.id) {
+            sponsor.paid = request.body.paid
+        }
+    })
+    response.json(sponsors)
+}
+
+let updateAmount = (request,response) => {
     sponsors.map((sponsor,index) => {
         if (+request.params.id === sponsor.id) {
-            sponsor[index] = request.body
+            sponsor.amount = +request.body.amount
+            sponsor.perLap = request.body.perLap
         }
-        response.json(sponsor)
+        response.json(sponsors)
     })
 }
 
@@ -77,6 +87,7 @@ let deleteSponsor = (request,response) => {
 module.exports = {
     getSponsors,
     addSponsor,
-    updateSponsor,
+    updatePaid,
+    updateAmount,
     deleteSponsor
 }

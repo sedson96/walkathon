@@ -10,7 +10,7 @@ class NewSponser extends Component {
             lastName: "",
             phone: "",
             amount: "",
-            perLap: true,
+            perLap: false,
             paid: false,
             comment: null
         }
@@ -52,8 +52,10 @@ class NewSponser extends Component {
                     </div>
                     <div>
                         <label>Amount:</label>
-                        <label>Per Lap Amount</label>
-                        <input className="check" type="checkbox" name="perLap" onChange={this.handleCheck}/>
+                        <div className="lap">
+                            <label>Per Lap Amount</label>
+                            <input className="check" type="checkbox" name="perLap" onChange={this.handleCheck}/>
+                        </div>
                         <input className="boxs" name="amount" onChange={this.handleChange}/>
                     </div>
                     <div>
