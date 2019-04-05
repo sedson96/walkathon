@@ -8,7 +8,7 @@ class Sponsors extends Component {
         super()
         this.state = {
             sponsors: [],
-            edit: true
+            edit: false
         }
         this.delete = this.delete.bind(this)
         this.changeAmount = this.changeAmount.bind(this)

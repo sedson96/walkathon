@@ -11,7 +11,7 @@ class App extends Component {
   constructor() {
     super()
     this.state = {
-      nav: "sponsors"
+      nav: "home"
     }
     this.navigate = this.navigate.bind(this);
   }
