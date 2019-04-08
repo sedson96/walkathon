@@ -21,8 +21,8 @@ function Amount (props) {
         </div>
                 {paid && !edit? <label>Paid</label>: null}
 
-            {!edit ? <h2 className="amountNumber">${amount}{perLap ? "/lap" : null }</h2> :
-                        <Edit amount={amount} id={id} changeAmount={props.changeAmount}/>}
+                {!edit ?  <h2 className="amountNumber">${amount}{perLap ? "/lap" : null }</h2> :
+                        <Edit amount={parseInt(amount)} id={id} changeAmount={props.changeAmount} editToggle={props.editToggle}/>}
             
         
             

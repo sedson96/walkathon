@@ -7,11 +7,14 @@ class Sponsors extends Component {
     constructor() {
         super()
         this.state = {
-            sponsors: []
+            sponsors: [],
+            input: ""
         }
         this.delete = this.delete.bind(this)
         this.changeAmount = this.changeAmount.bind(this)
         this.paidEdit = this.paidEdit.bind(this)
+        this.filter = this.filter.bind(this)
+        this.handleChange = this.handleChange.bind(this)
     }
 
     componentDidMount() {
@@ -26,7 +29,6 @@ class Sponsors extends Component {
         .put(`/api/sponsors/amount/${id}`,{amount: newAmount, perLap: perLap})
         .then(response => this.setState({sponsors: response.data}))
         .catch(error => "There was an error")
-        this.setState({edit: false})
     }
     paidEdit(paid,id) {
         if(paid) {
@@ -39,17 +41,27 @@ class Sponsors extends Component {
         .then(response => this.setState({sponsors: response.data}))
         .catch(error => "There was an error")
     }
+    filter(input) {
+        axios.get(`/api/sponsors//filter/?text=${input}`).then (response => {
+          this.setState({sponsors: response.data})
+        })
+    } 
     delete(id) {
         axios
         .delete(`/api/sponsors/${id}`)
         .then(response => this.setState({sponsors: response.data}))
         .catch(error => "There was an Error")
     }
+    handleChange(event) {
+        this.setState({input: event.target.value})
+        this.filter(this.state.input)
+    }
 
 render() {
     return(
         <main>
             <h1 className ="title">Sponsors</h1>
+            <input onChange={this.handleChange}/>
             {this.state.sponsors.map((sponsor) => { 
              let {id,firstName,lastName,phone,amount,perLap,comment,paid} = sponsor;
              return(
