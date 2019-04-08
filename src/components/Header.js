@@ -1,10 +1,10 @@
 import React from "react";
-import logo from "../img/logo.png"
+import Image from "../components/Image"
 
 function Header(props) {
     return(
         <header>
-        <img src={logo} alt="Gravity Youth Logo"/>
+        <Image/>
         <nav>
           <h3 onClick={() => props.navigate("home")}>Home</h3>
           <h3 onClick={() => props.navigate("sponsors")}>Sponsors</h3>

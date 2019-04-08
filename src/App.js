@@ -6,6 +6,7 @@ import Goals from "./components/Goals"
 import Sponsors from "./components/Sponsors"
 import NewSponsor from "./components/NewSponsor"
 import Header from "./components/Header"
+import Footer from "./components/Footer"
 
 class App extends Component {
   constructor() {
@@ -27,7 +28,8 @@ class App extends Component {
          this.state.nav === "sponsors" ? <Sponsors /> :
          this.state.nav === "new" ? <NewSponsor navigate={this.navigate}/> :
          this.state.nav === "goals" ? <Goals /> :
-         "An error has occured"}
+         "An error has occured"} 
+      <Footer />
       </div>
     );
   }

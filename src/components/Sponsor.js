@@ -20,7 +20,6 @@ class Sponsor extends Component {
             this.setState({edit: true});
         }
 }
-//amountCHanged function pass it as a prop and in the function set state to change edit back to false
     render(){
 
         let {id,firstName,lastName,phone,amount,perLap,comment,paid} = this.props;

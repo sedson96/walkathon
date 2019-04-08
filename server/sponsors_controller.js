@@ -66,7 +66,7 @@ let sponsors = [
         lastName: "Winky",
         phone: "234-234-2342",
         amount: 89,
-        perLap: true,
+        perLap: false,
         paid: false,
         comment: ""
     },

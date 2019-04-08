@@ -3,6 +3,11 @@ header {
     flex-direction: column;
     align-items: center;
 }
+footer {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
 body {
     background: #A8ACB2;
     font-family: 'Noto Sans', sans-serif;
@@ -44,7 +49,6 @@ main{
     margin:0px 20px;
     border-radius: 5px;
     z-index: 0;
-
 }
 
 article {
@@ -105,4 +109,11 @@ svg {
     font-size: 9em;
     margin:10vh auto;
     color: #ccc;
+}
+.sponsorSearch {
+    width: 8em;
+    height: 25px;
+    border-radius: 3px;
+    border: 1px solid #424249;
+    font-size: 1em
 }

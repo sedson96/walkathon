@@ -15,10 +15,11 @@ form div {
     margin:20px
 }
 .boxs {
-    width: 20em;
+    width: 15em;
     height: 45px;
     border-radius: 3px;
     border: 1px solid #424249;
+    font-size: .7em
   
 }
 .check  {
