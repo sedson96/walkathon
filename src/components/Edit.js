@@ -32,7 +32,7 @@ class Edit extends Component {
                     <p>per lap</p>
                     <input name="perLap" type="checkbox" onChange={this.handleCheck}/>
                 </div>
-                <input onChange={this.handleChange}/>
+                <input type="number" onChange={this.handleChange}/>
             </form>
         )
     }

@@ -29,7 +29,7 @@ class NewSponser extends Component {
             axios
             .post("/api/sponsors",this.state)
             .then(response => this.props.navigate('sponsors'))
-            .catch(error => "there was an error")
+            .catch(error=> console.log("there was an error"))
         }
 
 
@@ -57,7 +57,7 @@ class NewSponser extends Component {
                             <label>Per Lap Amount</label>
                             <input className="check" type="checkbox" name="perLap" onChange={this.handleCheck}/>
                         </div>
-                        <input className="boxs" name="amount" onChange={this.handleChange}/>
+                        <input className="boxs" type="number" name="amount" onChange={this.handleChange}/>
                     </div>
                     <div>
                         <label>Comments:</label>

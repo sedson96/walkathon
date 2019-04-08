@@ -17,18 +17,18 @@ class Goals extends Component {
         axios
         .get("api/goals")
         .then(response => this.setState(response.data))
-        .catch(error => "there was an error")
+        .catch(error=> console.log("there was an error"))
     }
 
     setGoals() {
         axios
         .put(`api/lap/goals/${this.state.lapGoal}`)
         .then(response => this.setState({lapGoal: response.data}))
-        .catch(error => "there was an error")
+        .catch(error=> console.log("there was an error"))
         axios
         .put(`api/amount/goals/${this.state.amountGoal}`)
         .then(response => this.setState({amountGoal: response.data}))
-        .catch(error => "there was an error")
+        .catch(error=> console.log("there was an error"))
 
     }
 

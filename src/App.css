@@ -61,6 +61,18 @@ article {
     padding: 30px;
     border-radius: 15px 
 }
+.simple {
+    width: 70vw;
+    height: 5vh;
+    background: white;
+    margin: 15px auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    border-radius: 15px;
+    font-size: 3em;
+    padding: 25px;
+}
 .amount{
     display: flex;
     flex-direction: column;
@@ -116,4 +128,27 @@ svg {
     border-radius: 3px;
     border: 1px solid #424249;
     font-size: 1em
+}
+.sponsorsNav{
+    display: flex;
+    width: 70vw;
+    justify-content: space-around;
+    align-items: center
+}
+.sponsorsNav label{
+    color: #ccc
+}
+.sponsorsNav button {
+    background-color: #424249;
+    border: 1px solid #A89344;
+    color: #A89344;
+    padding: 2px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+    cursor: pointer;
+    border-radius: 0px;
+    height: 2em;
+    margin: 2px;
 }

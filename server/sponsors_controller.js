@@ -1,7 +1,17 @@
-let id = 8
+let id = 9
 let sponsors = [
     {
         id: 0,
+        firstName: "Josh",
+        lastName: "Nicholes",
+        phone: "232-346-4235",
+        amount: 100,
+        perLap: false,
+        paid: false,
+        comment: "get the money from Helen at the premier"
+    },
+    {
+        id: 1,
         firstName: "Cat",
         lastName: "Dog",
         phone: "213-132-2133",
@@ -11,7 +21,7 @@ let sponsors = [
         comment: null
     },
     {
-        id: 1,
+        id: 2,
         firstName: "Grim",
         lastName: "Reaper",
         phone: "232-982-2323",
@@ -21,17 +31,17 @@ let sponsors = [
         comment: "not to sure about going to the underworld for the money"
     },
     {
-        id: 2,
+        id: 3,
         firstName: "Larry",
         lastName: "The Lobster",
-        phone: "843-2543-6523",
+        phone: "843-243-6523",
         amount: 1,
         perLap: true,
         paid: false,
         comment: "get the money at the dark alley"
     },
     {
-        id: 3,
+        id: 4,
         firstName: "Tony",
         lastName: "Stark",
         phone: "942-432-4234",
@@ -41,7 +51,7 @@ let sponsors = [
         comment: "don't tell pepper"
     },
     {
-        id: 4,
+        id: 5,
         firstName: "Poseidon",
         lastName: "god of the sea",
         phone: "234-234-2342",
@@ -51,7 +61,7 @@ let sponsors = [
         comment: "make sure the money is not wet"
     },
     {
-        id: 5,
+        id: 6,
         firstName: "Pikkachu",
         lastName: "",
         phone: "234-234-2342",
@@ -61,24 +71,14 @@ let sponsors = [
         comment: "Donation was very shocking"
     },
     {
-        id: 6,
+        id: 7,
         firstName: "Tinky",
         lastName: "Winky",
-        phone: "234-234-2342",
+        phone: "234-432-7634",
         amount: 89,
         perLap: false,
         paid: false,
         comment: ""
-    },
-    {
-        id: 7,
-        firstName: "Josh",
-        lastName: "Nicholes",
-        phone: "232-346-4235",
-        amount: 100,
-        perLap: false,
-        paid: false,
-        comment: "get the money from Helen at the premier"
     },
     {
         id: 8,

@@ -18,10 +18,11 @@ class Stats extends Component {
         axios
         .get("/api/sponsors")
         .then(response => this.setState({sponsors: response.data}))
-        .catch(error => "There was an Error")
+        .catch(error=> console.log("there was an error"))
         axios
         .get("api/goals")
         .then(response => this.setState(response.data))
+        .catch(error=> console.log("there was an error"))
     }
 
 
